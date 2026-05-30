@@ -241,16 +241,16 @@ Metric      : F1 Score  (primary)  +  ROC-AUC  (secondary)
 ## 📈 Results
 
 | Model | OOF F1 | ROC-AUC | Threshold |
-|-------|--------|---------|-----------|
-| XGBoost | — | — | — |
-| LightGBM | — | — | — |
-| Random Forest | — | — | — |
-| CatBoost | — | — | — |
-| **L1 Ensemble** | — | — | — |
-| **L2 Stack** | — | — | — |
-| 🏆 **Final Blend** | **—** | **—** | **—** |
+|-------|:------:|:-------:|:---------:|
+| XGBoost | 0.9426 | 0.9627 | 0.291 |
+| LightGBM | 0.9455 | 0.9663 | 0.327 |
+| Random Forest | 0.9502 | 0.9710 | 0.450 |
+| CatBoost | 0.9475 | 0.9683 | 0.246 |
+| **L1 Ensemble** | **0.9473** | **0.9686** | **0.321** |
+| **L2 Stack** | **0.9517** | **0.9721** | **0.465** |
+| 🏆 **Final Blend** | **0.9513** | **0.9712** | **0.402** |
 
-> Fill in your actual OOF scores after running the notebook.
+> L1 weights: `XGB=0.249 · LGB=0.250 · RF=0.251 · CAT=0.250` — nearly equal, indicating all four models contribute comparably.
 
 ---
 
@@ -286,32 +286,11 @@ jupyter notebook notebook.ipynb
 #    submission.csv  →  ID, TARGET format
 ```
 
----
-
-## 📋 Submission Format
-
-```csv
-ID,TARGET
-2,0
-5,1
-6,0
-...
-```
-
----
 
 ## 🏆 Scoring
 
 $$\text{Total Marks} = \underbrace{\sum_{i=1}^{10} \text{answer}_i}_{\text{10 pts}} + \underbrace{F1 \times 10}_{\text{10 pts}} + \underbrace{\text{judge}}_{\text{5 pts}}$$
 
-| Component | Marks | Details |
-|-----------|-------|---------|
-| 📋 EDA Answers | 10 | 1 mark × 10 questions |
-| 📊 F1 Score | 10 | F1 on hidden test × 10 |
-| 👨‍⚖️ Judge | 5 | Manual notebook review |
-| **Total** | **25** | |
-
----
 
 ## 📏 Competition Rules
 
