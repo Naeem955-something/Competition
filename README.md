@@ -325,6 +325,5 @@ $$\text{Total Marks} = \underbrace{\sum_{i=1}^{10} \text{answer}_i}_{\text{10 pt
 
 <div align="center">
 
-**Good Food, Good Gut! Competition · Individual Submission**
 
 </div>
